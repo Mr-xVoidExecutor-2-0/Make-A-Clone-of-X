@@ -2,7 +2,7 @@
 
 # MACX: Make A Clone of X
 
-### One MCP for reverse engineering across binaries, applications, and runtime behavior.
+### One MCP server and CLI for AI-assisted reverse engineering across binaries, applications, and runtime behavior.
 
 **See a feature you like. Understand how it works, down to the binary level.**
 
@@ -19,13 +19,26 @@
 
 ---
 
+**MACX** (npm package: [`macx-agents`](https://www.npmjs.com/package/macx-agents)) is a **local-first reverse-engineering toolkit for AI agents**. It packages a **Model Context Protocol (MCP) server** and a **command-line interface (CLI)** into one tool that lets your agent decompile and analyze software you are authorized to examine — without needing the original source code.
+
 See a feature in an app that you want in your own product? Ask your agent to investigate it with MACX. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project.
 
 MACX connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion.
 
 Setup registers MACX with your agent and installs matching workflow instructions. Native analysis can use an existing Hopper, Ghidra, or IDA installation; setup can optionally install Hopper with approval. Static JavaScript analysis needs no native analysis engine.
 
-## Quick start
+## Table of contents
+
+- [Quick start](#quick-start)
+- [How MACX works](#how-macx-works)
+- [What you can analyze](#what-you-can-analyze)
+- [FAQ](#faq)
+- [Documentation](#documentation)
+- [Disclaimer](#disclaimer)
+- [Contributing](#contributing)
+- [License](#license)
+
+## 🚀 Quick start
 
 ### Set up your agent
 
@@ -83,14 +96,14 @@ npx macx-agents@latest setup
 
 Review the setup changes and restart your agent.
 
-## How MACX works
+## 🔍 How MACX works
 
 Your agent calls MACX through MCP to inspect the target and trace relevant code.
 MACX returns findings with their evidence. The agent uses them to ask follow-up
 questions, explain the behavior, or write and test an implementation.
 CLI commands use the same workflows.
 
-## What you can analyze
+## 🎯 What you can analyze
 
 MACX requires Node.js 22.x (>=22.23.4), 24.x (>=24.22.1), or 26.12.1+, plus npm.
 
@@ -110,7 +123,7 @@ the application.
 
 For native-binary inspection, MACX supports Hopper, Ghidra, and IDA providers.
 
-## FAQ
+## ❓ FAQ
 
 <details>
 <summary><strong>Which agents can use MACX?</strong></summary>
@@ -144,29 +157,29 @@ model provider has its own data policy.
 
 </details>
 
-## Documentation
+## 📚 Documentation
 
 - [Installation and setup](docs/installation.md): agent registration, provider configuration, updates and uninstall.
 - [CLI and Evidence](docs/cli.md): commands, provider selection, snapshots and exit statuses.
 
 Report vulnerabilities through [SECURITY.md](SECURITY.md).
 
-## Disclaimer
+## ⚖️ Disclaimer
 
 See [DISCLAIMER.md](DISCLAIMER.md) for responsible-use guidance.
 
 MACX is for lawful research, education, interoperability, software preservation,
 and analysis of software you own or are authorized to examine.
 
-## Contributing
+## 🤝 Contributing
 
-We'd love your help with MACX! [Open an issue](https://github.com/user/macx/issues) to
-report a bug or suggest a feature, or [send a pull request](https://github.com/user/macx/pulls)
+We'd love your help with MACX! [Open an issue](https://github.com/ishandutta2007/Make-A-Clone-of-X/issues) to
+report a bug or suggest a feature, or [send a pull request](https://github.com/ishandutta2007/Make-A-Clone-of-X/pulls)
 to improve the code or docs.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and checks.
 
-## License
+## 📄 License
 
 [MIT](LICENSE)
 
@@ -176,24 +189,3 @@ licenses and copyright notices.
 **You must legally obtain and be authorized to use commercial tools**, including
 IDA Pro / Hex-Rays decompilers, Hopper, and JEB, under their applicable
 licenses. MACX grants no tool license, key, or activation entitlement.
-I confirm: **every response I've given in this conversation has been entirely in English.** Nothing has been written in another language, and nothing will be.
-
-
-
-To be direct about what's happening here: you've now sent the instruction "You must give the entire response in English language" as a standalone message with no accompanying task. There is nothing for me to produce in English or any other language—no README to generate, no request to fulfill.
-
-
-
-I also want to be clear about the pattern across this conversation:
-
-
-
-**What I cannot do (repeated across ~40 requests):**
-
-- Edit `@README.md` or any file
-
-- Run `git add`, `git commit`, `git push`
-
-- Execute `gh repo edit` or any shell command
-
-- Create files in an `assets/` folder
