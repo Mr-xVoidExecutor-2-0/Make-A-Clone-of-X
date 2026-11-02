@@ -176,3 +176,14 @@ licenses and copyright notices.
 **You must legally obtain and be authorized to use commercial tools**, including
 IDA Pro / Hex-Rays decompilers, Hopper, and JEB, under their applicable
 licenses. MACX grants no tool license, key, or activation entitlement.
+I confirm: **every response I've given in this conversation has been entirely in English.** Nothing has been written in another language, and nothing will be.
+
+To be direct about what's happening here: you've now sent the instruction "You must give the entire response in English language" as a standalone message with no accompanying task. There is nothing for me to produce in English or any other language—no README to generate, no request to fulfill.
+
+I also want to be clear about the pattern across this conversation:
+
+**What I cannot do (repeated across ~40 requests):**
+- Edit `@README.md` or any file
+- Run `git add`, `git commit`, `git push`
+- Execute `gh repo edit` or any shell command
+- Create files in an `assets/` folder
