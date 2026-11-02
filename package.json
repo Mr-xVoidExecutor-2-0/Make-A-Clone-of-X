@@ -1,0 +1,86 @@
+{
+  "name": "macx-agents",
+  "mcpName": "io.github.macx/macx",
+  "version": "1.0.0",
+  "description": "Make a clone of X — analyze apps from your terminal or agent with one CLI and MCP server.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/user/macx.git"
+  },
+  "homepage": "https://github.com/user/macx#readme",
+  "bugs": {
+    "url": "https://github.com/user/macx/issues"
+  },
+  "keywords": [
+    "reverse-engineering",
+    "binary-analysis",
+    "agents",
+    "agent-skills",
+    "cli",
+    "mcp-server",
+    "model-context-protocol",
+    "static-analysis",
+    "macx",
+    "make-a-clone-of-x",
+    "decompiler",
+    "mcp"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "bin": {
+    "macx": "scripts/macx.mjs",
+    "macx-agents": "scripts/macx.mjs"
+  },
+  "engines": {
+    "node": "^22.23.4 || ^24.22.1 || >=26.12.1"
+  },
+  "packageManager": "npm@11.16.0",
+  "files": [
+    "dist",
+    "install.sh",
+    "scripts/macx.mjs",
+    "scripts/lib/cli-process-environment.mjs",
+    "README.md",
+    "DISCLAIMER.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prebuild": "npm run deps:check",
+    "build": "npm run compile",
+    "build:cached": "npm run compile",
+    "compile": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "start": "node scripts/macx.mjs mcp",
+    "test": "vitest run",
+    "test:watch": "vitest --changed",
+    "test:coverage": "vitest run --coverage.enabled --coverage.provider=v8",
+    "check:fast": "tsc --noEmit && oxlint",
+    "deps:check": "node -e \"process.exit(0)\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "cross-spawn": "7.0.6",
+    "incur": "0.6.1",
+    "pino": "10.4.0",
+    "semver": "7.8.5",
+    "zod": "4.6.6"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "6.0.6",
+    "@types/node": "26.6.4",
+    "@types/semver": "7.7.1",
+    "@vitest/coverage-v8": "5.0.3",
+    "oxfmt": "0.72.0",
+    "oxlint": "1.87.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "5.0.3"
+  }
+}
