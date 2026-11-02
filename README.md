@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/banner.svg" alt="MACX: Make A Clone of X — one MCP server & CLI for AI-assisted reverse engineering" width="100%" />
+
 # MACX: Make A Clone of X
 
 ### One MCP server and CLI for AI-assisted reverse engineering across binaries, applications, and runtime behavior.

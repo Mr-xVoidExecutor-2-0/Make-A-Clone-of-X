@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="bannerTitle bannerDesc">
+  <title id="bannerTitle">MACX: Make A Clone of X</title>
+  <desc id="bannerDesc">Animated banner for MACX, a local-first reverse engineering MCP server and CLI for AI agents.</desc>
+
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.5" stop-color="#121a2b"/>
+      <stop offset="1" stop-color="#0d1117"/>
+      <animate attributeName="x1" values="0;1;0" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;2;1" dur="14s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="flowGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#38bdf8" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#22d3ee" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="0.5" stop-color="#e2e8f0"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a855f7" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Foreground scrim behind text so animated elements never obscure it -->
+    <linearGradient id="scrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#0d1117" stop-opacity="0.82"/>
+      <stop offset="0.82" stop-color="#0d1117" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0"/>
+    </linearGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0v40" fill="none" stroke="#38bdf8" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- ============ BACKGROUND (animated, behind everything) ============ -->
+  <rect width="1200" height="320" fill="url(#bgGrad)"/>
+  <rect width="1200" height="320" fill="url(#grid)"/>
+
+  <!-- Drifting glow blobs -->
+  <g>
+    <circle cx="200" cy="90" r="170" fill="url(#glowA)">
+      <animate attributeName="cx" values="200;340;200" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="90;220;90" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1010" cy="230" r="190" fill="url(#glowB)">
+      <animate attributeName="cx" values="1010;870;1010" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="230;110;230" dur="15s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Flowing data stream (wave) -->
+  <path fill="none" stroke="url(#flowGrad)" stroke-width="2.5">
+    <animate attributeName="d"
+      values="M0,250 C200,210 300,290 500,250 C700,210 800,290 1000,250 C1100,230 1150,260 1200,250;
+              M0,250 C200,290 300,210 500,250 C700,290 800,210 1000,250 C1100,270 1150,240 1200,250;
+              M0,250 C200,210 300,290 500,250 C700,210 800,290 1000,250 C1100,230 1150,260 1200,250"
+      dur="9s" repeatCount="indefinite"/>
+  </path>
+  <path fill="none" stroke="url(#flowGrad)" stroke-width="1.5" opacity="0.6" transform="translate(0,-45)">
+    <animate attributeName="d"
+      values="M0,250 C200,290 300,210 500,250 C700,290 800,210 1000,250 C1100,270 1150,240 1200,250;
+              M0,250 C200,210 300,290 500,250 C700,210 800,290 1000,250 C1100,230 1150,260 1200,250;
+              M0,250 C200,290 300,210 500,250 C700,290 800,210 1000,250 C1100,270 1150,240 1200,250"
+      dur="7s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Scanning analysis line sweeping across -->
+  <rect x="0" y="0" width="3" height="320" fill="url(#scanGrad)" opacity="0.7">
+    <animate attributeName="x" values="-3;1200;-3" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Floating "code pill" chips (background decoration) -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#7dd3fc">
+    <g opacity="0.55">
+      <rect x="60" y="46" width="118" height="26" rx="13" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-opacity="0.35"/>
+      <text x="119" y="63" text-anchor="middle">decompile()</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -10; 0 0" dur="6s" repeatCount="indefinite"/>
+    </g>
+    <g opacity="0.55" fill="#c4b5fd">
+      <rect x="980" y="52" width="150" height="26" rx="13" fill="#a855f7" fill-opacity="0.12" stroke="#a855f7" stroke-opacity="0.35"/>
+      <text x="1055" y="69" text-anchor="middle">mcp.tools.list</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 12; 0 0" dur="7s" repeatCount="indefinite"/>
+    </g>
+    <g opacity="0.5" fill="#86efac">
+      <rect x="120" y="252" width="128" height="26" rx="13" fill="#22c55e" fill-opacity="0.12" stroke="#22c55e" stroke-opacity="0.35"/>
+      <text x="184" y="269" text-anchor="middle">xrefs trace</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -14; 0 0" dur="8s" repeatCount="indefinite"/>
+    </g>
+    <g opacity="0.5" fill="#fda4af">
+      <rect x="940" y="248" width="140" height="26" rx="13" fill="#f43f5e" fill-opacity="0.12" stroke="#f43f5e" stroke-opacity="0.35"/>
+      <text x="1010" y="265" text-anchor="middle">evidence.json</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 10; 0 0" dur="6.5s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Pulse rings (background) -->
+  <g fill="none" stroke="#38bdf8">
+    <circle cx="600" cy="160" r="60" stroke-opacity="0.25">
+      <animate attributeName="r" values="60;300" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.3;0" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="160" r="60" stroke-opacity="0.25" stroke="#a855f7">
+      <animate attributeName="r" values="60;300" dur="5s" begin="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.3;0" dur="5s" begin="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ============ FOREGROUND (static, always on top) ============ -->
+  <rect x="0" y="88" width="1200" height="144" fill="url(#scrim)"/>
+
+  <g text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <text x="600" y="158" font-size="58" font-weight="800" letter-spacing="4" fill="url(#textGrad)">MACX: Make A Clone of X</text>
+    <text x="600" y="204" font-size="21" font-weight="500" fill="#cbd5e1">One MCP server &amp; CLI for AI-assisted reverse engineering</text>
+    <text x="600" y="234" font-size="15" fill="#94a3b8">reverse engineering · binary analysis · model context protocol</text>
+  </g>
+
+  <!-- Static corner brackets framing the title -->
+  <g stroke="#38bdf8" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M70,96 v-26 h26"/>
+    <path d="M1130,96 v-26 h-26"/>
+    <path d="M70,224 v26 h26"/>
+    <path d="M1130,224 v26 h-26"/>
+  </g>
+</svg>
