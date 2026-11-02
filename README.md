@@ -21,7 +21,7 @@
 
 ---
 
-**MACX** (npm package: [`macx-agents`](https://www.npmjs.com/package/macx-agents)) is a **local-first reverse-engineering toolkit for AI agents**. It packages a **Model Context Protocol (MCP) server** and a **command-line interface (CLI)** into one tool that lets your agent decompile and analyze software you are authorized to examine — without needing the original source code.
+**MACX** 🛡️ (npm package: [`macx-agents`](https://www.npmjs.com/package/macx-agents)) is a **local-first reverse-engineering toolkit for AI agents**. It packages a **Model Context Protocol (MCP) server** and a **command-line interface (CLI)** into one tool that lets your agent decompile and analyze software you are authorized to examine — without needing the original source code.
 
 See a feature in an app that you want in your own product? Ask your agent to investigate it with MACX. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project.
 
@@ -31,18 +31,18 @@ Setup registers MACX with your agent and installs matching workflow instructions
 
 ## Table of contents
 
-- [Quick start](#quick-start)
-- [How MACX works](#how-macx-works)
-- [What you can analyze](#what-you-can-analyze)
-- [FAQ](#faq)
-- [Documentation](#documentation)
-- [Disclaimer](#disclaimer)
-- [Contributing](#contributing)
-- [License](#license)
+- [🚀 Quick start](#quick-start)
+- [🔍 How MACX works](#how-macx-works)
+- [🎯 What you can analyze](#what-you-can-analyze)
+- [❓ FAQ](#faq)
+- [📚 Documentation](#documentation)
+- [⚖️ Disclaimer](#disclaimer)
+- [🤝 Contributing](#contributing)
+- [📄 License](#license)
 
 ## 🚀 Quick start
 
-### Set up your agent
+### 🤖 Set up your agent
 
 With Node.js and npm installed, run:
 
@@ -54,9 +54,9 @@ Choose your agents, review the proposed changes, and approve them. Setup adds
 MACX's MCP server and matching workflow instructions, with backups of existing
 configuration. Restart your agent afterward.
 
-Setup supports Claude Code, Codex, Cursor, Gemini CLI, Grok Build and other agents.
+Setup supports 🤖 Claude Code, Codex, Cursor, Gemini CLI, Grok Build and other agents.
 
-### Ask your agent
+### 💬 Ask your agent
 
 ```text
 Understand how search works in the Notes app, show me the evidence, and build a
@@ -65,7 +65,7 @@ similar feature for my project.
 
 Replace Notes with your target app and the feature you want to understand.
 
-### Use the terminal
+### 🖥️ Use the terminal
 
 Inspect an extracted JavaScript/Electron app directory or ASAR:
 
@@ -82,7 +82,7 @@ npm install --global macx-agents
 macx --help
 ```
 
-### Update MACX
+### 🔄 Update MACX
 
 For a CLI installed with `npm install --global`:
 
@@ -161,8 +161,8 @@ model provider has its own data policy.
 
 ## 📚 Documentation
 
-- [Installation and setup](docs/installation.md): agent registration, provider configuration, updates and uninstall.
-- [CLI and Evidence](docs/cli.md): commands, provider selection, snapshots and exit statuses.
+- 🛠️ [Installation and setup](docs/installation.md): agent registration, provider configuration, updates and uninstall.
+- 🧾 [CLI and Evidence](docs/cli.md): commands, provider selection, snapshots and exit statuses.
 
 Report vulnerabilities through [SECURITY.md](SECURITY.md).
 
@@ -175,7 +175,7 @@ and analysis of software you own or are authorized to examine.
 
 ## 🤝 Contributing
 
-We'd love your help with MACX! [Open an issue](https://github.com/ishandutta2007/Make-A-Clone-of-X/issues) to
+We'd love your help with MACX! 💜 [Open an issue](https://github.com/ishandutta2007/Make-A-Clone-of-X/issues) to
 report a bug or suggest a feature, or [send a pull request](https://github.com/ishandutta2007/Make-A-Clone-of-X/pulls)
 to improve the code or docs.
 
