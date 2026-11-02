@@ -191,3 +191,7 @@ licenses and copyright notices.
 **You must legally obtain and be authorized to use commercial tools**, including
 IDA Pro / Hex-Rays decompilers, Hopper, and JEB, under their applicable
 licenses. MACX grants no tool license, key, or activation entitlement.
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Make-A-Clone-of-X&type=date&legend=true)](https://star-history.dera.page/#ishandutta2007/Make-A-Clone-of-X)
